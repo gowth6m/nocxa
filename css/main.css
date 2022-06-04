@@ -6,11 +6,9 @@ OVERALL CSS
 
 :root {
     --white: #f8f8f8;
-    --greyWhite: #cccccc;
-    --starColorTwo: rgba(0, 0, 0, 0.25);
-    --canvasColor: rgb(216, 216, 216);
     --mainPurple: 	#8C52FF;
-}
+    --mainWhite: #F0F3F5;
+}  
 
 :root {
     --body: #0e0e0e;
@@ -30,26 +28,6 @@ OVERALL CSS
     --portfolioGalleryHover: rgba(255, 255, 255, 0.4);
 }
 
-:root{
-    --body-font: 'Montserrat', sans-serif;
-    --big-title-font-size: 5rem;
-    --big2-title-font-size: 6rem;
-    --title-font-size: 4rem;
-    --big-font-size: 2rem;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 0.938rem;
-}
-
-@media screen and (min-width: 768px){
-    :root{
-        --big2-title-font-size: 8rem;
-        --big-title-font-size: 6.5rem;
-        --title-font-size: 5.5rem;
-        --big-font-size: 3.5rem;
-        --h2-font-size: 2rem;
-        --normal-font-size: 1rem;
-    }
-}
 
 * {
     box-sizing: border-box;
@@ -72,12 +50,11 @@ body,html {
 
 body {
 	min-height: 100vh;
-	/* mobile viewport bug fix */
 	min-height: -webkit-fill-available;
 	overflow-x: hidden;
 	background-color: var(--body);
 	color: var(--white);
-	font-family: var(--body-font);
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 img {
@@ -111,6 +88,7 @@ ul{
 
 .container {
     overflow: hidden;
+    position: relative;
 }
 
 .container-inner {
@@ -122,3 +100,162 @@ ul{
     height: 94%;
     overflow: hidden;
 }
+
+
+/*====================================================
+NAVIGATION
+=====================================================*/
+#paper-back {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--mainPurple);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 33px;
+  }
+  #paper-back nav {
+    padding: 120px 34px;
+    position: fixed;
+  }
+  #paper-back nav a {
+    display: block;
+    margin-bottom: 25px;
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  #paper-back nav a:hover,
+  #paper-back nav a:focus {
+      color: black;
+  }
+
+  
+  #paper-window {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 2;
+  }
+  #paper-window.tilt {
+    overflow: hidden;
+    pointer-events: none;
+  }
+  #paper-window.tilt #paper-front {
+    transform: rotate(10deg) translateZ(0);
+  }
+  
+  #paper-front {
+    pointer-events: auto;
+    position: relative;
+    z-index: 3;
+    background-color: var(--mainWhite);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transform-origin: center 70%;
+    transition: all 0.3s ease;
+  }
+  
+  #container section {
+    height: 600px;
+    text-align: center;
+  }
+  #container section:first-of-type {
+    padding-top: 10vh;
+  }
+  #container section:first-of-type h1 {
+    font-size: 45px;
+  }
+  #container section:first-of-type p {
+    font-size: 25px;
+  }
+  @media (max-width: 600px) {
+    #container section:first-of-type {
+      padding-top: 15vh;
+    }
+    #container section:first-of-type h1 {
+      font-size: 30px;
+    }
+    #container section:first-of-type p {
+      font-size: 18px;
+    }
+  }
+  #container section:nth-of-type(2n) {
+    background-color: #edf1f5;
+  }
+  
+  .hamburger {
+    position: fixed;
+    z-index: 4;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 34px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .hamburger span {
+    position: relative;
+  }
+  .hamburger span, .hamburger span:before, .hamburger span:after {
+    display: block;
+    width: 45px;
+    height: 6px;
+    background-color: var(--mainPurple);
+    border-radius: 2px;
+  }
+  .hamburger span:before, .hamburger span:after {
+    content: "";
+    position: absolute;
+  }
+  .hamburger span:before {
+    bottom: -14px;
+  }
+  .hamburger span:after {
+    bottom: -28px;
+  }
+  
+  .close {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 34px;
+    cursor: pointer;
+  }
+  .close:before, .close:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 6px;
+    top: 50%;
+    background-color: white;
+    border-radius: 2px;
+  }
+  .close:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .close:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  /*====================================================
+HOME
+=====================================================*/
+.home-title {
+    color: var(--mainPurple);
+    font-size: 6em;
+    font-weight: 900;
+    margin-top: 10vh;
+}
+
+.home-intro {
+    color: black;
+    font-size: 3em;
+}
+
