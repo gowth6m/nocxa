@@ -133,8 +133,9 @@ NAVIGATION
     display: block;
     margin-bottom: 25px;
     text-decoration: none;
-    color: var(--white);
+    color: white;
     text-align: left;
+    font-family: 'MuseoModerno', cursive;
   }
 
   #paper-back nav a:hover,
