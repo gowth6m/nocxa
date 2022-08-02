@@ -1,55 +1,144 @@
-// Burger menu
-var paperMenu = {
-  $window: $('#paper-window'),
-  $paperFront: $('#paper-front'),
-  $hamburger: $('.hamburger'),
-  offset: 1800,
-  pageHeight: $('#paper-front').outerHeight(),
-  
-  open: function() {
-    this.$window.addClass('tilt');
-    this.$hamburger.off('click');
-    $('#container, .hamburger').on('click', this.close.bind(this));
-    this.hamburgerFix(true);
-    console.log('opening...');
-  },
-  close: function() {
-    this.$window.removeClass('tilt'); 
-    $('#container, .hamburger').off('click');
-    this.$hamburger.on('click', this.open.bind(this));
-    this.hamburgerFix(false);
-    console.log('closing...');
-  },
-  updateTransformOrigin: function() {
-    scrollTop = this.$window.scrollTop();
-    equation = (scrollTop + this.offset) / this.pageHeight * 100;
-    this.$paperFront.css('transform-origin', 'center ' + equation + '%');
-  },
-  //hamburger icon fix to keep its position
-  hamburgerFix: function(opening) {
-      if(opening) {
-        $('.hamburger').css({
-          position: 'absolute',
-          top: this.$window.scrollTop() + 30 + 'px'
-        });
-      } else {
-        setTimeout(function() {
-          $('.hamburger').css({
-            position: 'fixed',
-            top: '30px'
-          });
-        }, 300);
-      }
-    },
-  bindEvents: function() {
-    this.$hamburger.on('click', this.open.bind(this));
-    $('.close').on('click', this.close.bind(this));
-    this.$window.on('scroll', this.updateTransformOrigin.bind(this));
-  },
-  init: function() {
-    this.bindEvents();
-    this.updateTransformOrigin();
-  },
-};
+$(document).ready(function () {
+	navNumbers();
+	backToDefault();
 
-paperMenu.init();
+	// show hovered li stuff
+	$(".main-menu").on("mouseover", "li", function () {
+		showTarget($(this));
+	});
+
+	// show default .active li stuff
+	$(".main-menu").on("mouseleave", backToDefault);
+
+	// change active list item
+	$(".main-menu").on("click", "li", function () {
+		changeActive($(this));
+	});
+
+	// toggle menu
+	$(".toggle").on("click", toggleMenu);
+
+	// for showcase only
+	var tl = new TimelineMax(),
+		body = $("body"),
+		header = $("header"),
+		content = $(".content p"),
+		toggle = $(".toggle"),
+		nav = $("nav");
+
+	tl.to(body, 1, {
+		padding: "0 80px 80px",
+		delay: 0.5
+	});
+
+	tl.to(header, 0.25, {
+		opacity: 1,
+		delay: 0.5
+	});
+
+	tl.to(
+		content,
+		0.25,
+		{
+			opacity: 1
+		},
+		"-=.25"
+	);
+
+	tl.call(
+		function () {
+			toggleMenu();
+		},
+		null,
+		null,
+		3
+	);
+
+	tl.call(
+		function () {
+			toggleMenu();
+		},
+		null,
+		null,
+		4.5
+	);
+});
+
+// toggle menu
+function toggleMenu() {
+	var toggle = $(".toggle");
+	var nav = $("nav");
+
+	if (toggle.hasClass("clicked")) {
+		toggle.removeClass("clicked");
+		nav.removeClass("open");
+		console.log("remove open");
+		setTimeout(function () {
+			console.log("add hidden");
+			nav.addClass("hidden");
+		}, 500);
+	} else {
+		nav.removeClass("hidden");
+		toggle.addClass("clicked");
+		nav.addClass("open");
+	}
+}
+
+// give the list items numbers
+function navNumbers() {
+	var sum = $(".main-menu li").length;
+	var i = 0;
+	var x = 0;
+
+	$(".showcase-menu li").each(function () {
+		$(this).attr("data-target", x);
+		x++;
+	});
+
+	$(".main-menu li").each(function () {
+		var number = ("0" + i).slice(-2);
+		var numberElement = '<div class="number"><span>' + number + "</span></div>";
+		$(this).prepend(numberElement);
+		$(this).attr("data-target", i);
+		i++;
+	});
+}
+
+// show the hovered list item stuff
+function showTarget(e) {
+	$(".main-menu li").removeClass("hover");
+
+	var target = $(e).attr("data-target");
+	var showcaseHeight = $(".showcase-menu").outerHeight();
+
+	showcaseHeight = showcaseHeight * target * -1;
+
+	$(".showcase-menu").css({
+		top: showcaseHeight
+	});
+
+	$(e).addClass("hover");
+}
+
+// show the list item stuff of .active
+function backToDefault() {
+	$(".main-menu li").removeClass("hover");
+
+	var activeItem = $(".main-menu li.active");
+	var target = activeItem.attr("data-target");
+	var showcaseHeight = $(".showcase-menu").outerHeight();
+
+	showcaseHeight = showcaseHeight * target * -1;
+
+	$(".showcase-menu").css({
+		top: showcaseHeight
+	});
+
+	activeItem.addClass("hover");
+}
+
+// change active list item
+function changeActive(e) {
+	$(".main-menu li").removeClass("active");
+	$(e).addClass("active");
+}
