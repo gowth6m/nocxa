@@ -43,13 +43,13 @@ html {
 }
 
 body,html {
-    text-align: center;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    margin: 0;
-    padding: 0;
-    max-width: 100vw;
-	scroll-behavior: smooth;
+  text-align: center;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,12 +58,12 @@ body {
 	overflow-x: hidden;
 	background-color: var(--body);
 	color: var(--white);
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 a{
@@ -76,227 +76,374 @@ ul{
 }
 
 .container-main {
-    height: 100vh;
-    margin: auto;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100vw;
+  height: 100vh;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
 }
 
 .grid-wrapper {
-    margin: 0 auto;
-    max-width: 1520px;
+  margin: 0 auto;
+  max-width: 1520px;
 }
 
 .container {
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .container-inner {
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 96%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 96%;
 }
 
 
 /*====================================================
 NAVIGATION
 =====================================================*/
-#paper-back {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--mainPurple);
-    position: fixed;
-    top: 0;
-    left: 0;
-    font-size: 33px;
-  }
-  #paper-back nav {
-    padding: 120px 34px;
-    position: fixed;
-  }
-  #paper-back nav a {
-    display: block;
-    margin-bottom: 25px;
-    text-decoration: none;
-    color: white;
-    text-align: left;
-    font-family: 'MuseoModerno', cursive;
-  }
-
-  #paper-back nav a:hover,
-  #paper-back nav a:focus {
-      color: black;
-  }
-
-  
-  #paper-window {
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    z-index: 2;
-  }
-  #paper-window.tilt {
-    overflow: hidden;
-    pointer-events: none;
-  }
-  #paper-window.tilt #paper-front {
-    transform: rotate(10deg) translateZ(0);
-  }
-  
-  #paper-front {
-    pointer-events: auto;
-    position: relative;
-    z-index: 3;
-    background-color: var(--mainWhite);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    transform-origin: center 70%;
-    transition: all 0.3s ease;
-  }
-  
-  #container section {
-    height: 100vh;
-    text-align: center;
-  }
-  /* #container section:first-of-type {
-    padding-top: 10vh;
-  }
-  #container section:first-of-type h1 {
-    font-size: 45px;
-  } */
-  #container section:first-of-type p {
-    font-size: 25px;
-  }
-  @media (max-width: 600px) {
-    #container section:first-of-type {
-      padding-top: 15vh;
-    }
-    /* #container section:first-of-type h1 {
-      font-size: 30px;
-    }
-    #container section:first-of-type p {
-      font-size: 18px;
-    } */
-  }
-  /* #container section:nth-of-type(2n) {
-    background-color: #edf1f5;
-  } */
-  
-  .hamburger {
-    position: fixed;
-    z-index: 4;
-    top: 30px;
-    left: 30px;
-    width: 45px;
-    height: 34px;
-    cursor: pointer;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  .hamburger span {
-    position: relative;
-  }
-  .hamburger span, .hamburger span:before, .hamburger span:after {
-    display: block;
-    width: 45px;
-    height: 6px;
-    background-color: var(--mainPurple);
-    border-radius: 2px;
-  }
-  .hamburger span:before, .hamburger span:after {
-    content: "";
-    position: absolute;
-  }
-  .hamburger span:before {
-    bottom: -14px;
-  }
-  .hamburger span:after {
-    bottom: -28px;
-  }
-  
-  .close {
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    width: 45px;
-    height: 34px;
-    cursor: pointer;
-  }
-  .close:before, .close:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 45px;
-    height: 6px;
-    top: 50%;
-    background-color: white;
-    border-radius: 2px;
-  }
-  .close:before {
-    transform: translateY(-50%) rotate(45deg);
-  }
-  .close:after {
-    transform: translateY(-50%) rotate(-45deg);
-  }
-
-/*====================================================
-HOME
-=====================================================*/
-.home {
-    height: 100vh;
-    width: 100vw;
-    background-color: var(--mainWhite);
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.home-title {
-    color: var(--mainPurple);
-    font-size: 5em;
-    font-weight: 900;
-    margin-top: -25vh;
-    font-family: 'MuseoModerno', cursive;
-
+*::-moz-selection {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
-.home-intro {
-    color: black;
-    font-size: 2em;
+*::selection {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  transition: padding 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+a {
+  text-decoration: none;
+  color: #EF3340;
+}
+
+header {
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+header .nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+}
+header .nav .title {
+  line-height: 80px;
+  padding: 0 120px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 900;
+}
+header .nav .toggle {
+  position: absolute;
+  margin: auto;
+  width: 46px;
+  height: 46px;
+  right: 120px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+header .nav .toggle .bar {
+  position: relative;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+}
+header .nav .toggle .bar:before, header .nav .toggle .bar:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  left: 0;
+  transform-origin: center center;
+  transition: transform 0.25s ease, top 0.25s ease, bottom 0.25s ease;
+}
+header .nav .toggle .bar:before {
+  top: -10px;
+}
+header .nav .toggle .bar:after {
+  bottom: -10px;
+}
+header .nav .toggle.clicked .bar {
+  background: transparent;
+}
+header .nav .toggle.clicked .bar:before, header .nav .toggle.clicked .bar:after {
+  background: #000;
+}
+header .nav .toggle.clicked .bar:before {
+  transform: rotate(45deg);
+  top: 0;
+}
+header .nav .toggle.clicked .bar:after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+header .nav nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+}
+header .nav nav .showcase {
+  background: #000;
+  flex: 1;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav nav .showcase .showcase-container {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+header .nav nav .showcase .showcase-container:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+header .nav nav .showcase .showcase-menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: visible;
+  list-style-type: none;
+  transition: top 0.25s ease;
+}
+header .nav nav .showcase .showcase-menu li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+header .nav nav .showcase .showcase-menu li.overlay:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+header .nav nav .menu {
+  background: #fff;
+  flex: 1;
+}
+header .nav nav .menu ul {
+  width: 100%;
+  padding: 80px 48px 24px 48px;
+  list-style-type: none;
+  max-height: 100%;
+  overflow-y: auto;
+}
+header .nav nav .menu ul::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.4);
+  border: 0px none #ffffff;
+  border-radius: 3px;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
+header .nav nav .menu ul::-webkit-scrollbar-thumb:active {
+  background: #000;
+}
+header .nav nav .menu ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border: 0px none #ffffff;
+  border-radius: 0;
+}
+header .nav nav .menu ul::-webkit-scrollbar-track:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+header .nav nav .menu ul::-webkit-scrollbar-track:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+header .nav nav .menu ul::-webkit-scrollbar-corner {
+  background: transparent;
+}
+header .nav nav .menu ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .nav nav .menu ul li .number {
+  display: inline-block;
+  padding: 0 0 0 80px;
+  overflow: hidden;
+}
+header .nav nav .menu ul li .number span {
+  display: block;
+  font-size: 48px;
+  font-weight: 400;
+  transition: transform 0.25s ease;
+  transform: translateY(100%);
+}
+header .nav nav .menu ul li a {
+  display: inline-block;
+  font-size: 48px;
+  color: #000;
+  line-height: 1;
+  padding: 24px 0 24px 80px;
+  transition: transform 0.25s ease;
+}
+header .nav nav .menu ul li:hover a {
+  transform: translateX(20px);
+}
+header .nav nav .menu ul li.hover .number span {
+  transform: translateY(0);
+}
+header .nav nav.hidden {
+  display: none;
+}
+header .nav nav.open {
+  opacity: 1;
+}
+header .nav nav.open .showcase {
+  -webkit-animation: slideInLeft 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+          animation: slideInLeft 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+header .nav nav.open .menu {
+  -webkit-animation: slideInRight 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+          animation: slideInRight 0.5s cubic-bezier(0.3, 0, 0.3, 1) forwards;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.content {
+  position: relative;
+  flex: 1;
+  padding: 80px 40px 40px;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/124740/2018-09-28%2009_21_48-https___d2kbkpwf98wmwo.cloudfront.net_videos_hero-lg.mp4.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.content p {
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.content p a {
+  color: #fff;
+  box-shadow: 0 1px 0 0 #EF3340;
 }
 
 /*====================================================
 ABOUT US
 =====================================================*/
-.about-us {
+.about {
     height: 100vh;
     width: 100vw;
     background-color: rgb(237, 217, 255);
 }
 
-.about-us-title {
+.about-title {
     color: var(--mainPurple);
     font-size: 5em;
     font-weight: 900;
     margin-top: -15vh;
 }
 
-.about-us-intro {
+.about-intro {
     color: black;
     font-size: 2em;
 }
