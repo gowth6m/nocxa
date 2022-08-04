@@ -90,7 +90,6 @@ $(function () {
     if ($(window).scrollTop() > 100) {
       $(".cd-header").addClass("cd-header-dark");
     } else {
-      //remove the background property so it comes transparent again (defined in your css)
       $(".cd-header").removeClass("cd-header-dark");
     }
   });
