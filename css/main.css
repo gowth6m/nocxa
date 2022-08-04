@@ -112,6 +112,14 @@ ul{
   width: 96%;
 }
 
+/* @media screen and (min-width: 1920px) {
+  .max-width-container {
+    max-width: 1920px;
+    overflow: hidden;
+    margin: auto;
+    width: 50%;
+  }
+} */
 
 /*====================================================
 NAVIGATION
@@ -216,11 +224,13 @@ a:hover {
   left: 0;
   z-index: 100;
 }
+.cd-header-dark {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 .header-wrapper {
   position: relative;
-  /* width: calc(100% - 50px); */
-  width: 94%;
-  margin-left: 3%;
+  width: 92%;
+  margin-left: 2%;
 }
 .logo-wrap {
   position: absolute;
@@ -249,7 +259,7 @@ a:hover {
   transition: all 0.3s ease-out;
 }
 .menu-icon {
-  height: 30px;
+  height: 50px;
   width: 30px;
   position: relative;
   z-index: 2;
