@@ -17,58 +17,60 @@
     <!-- JS -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script> -->
 </head>
 <body>
-    <header>
-        <div class="nav">
-            <div class="title">
-                Navigation
-            </div>
-            <div class="toggle">
-                <div class="bar"></div>
-            </div>
-            
-            <nav class="">
-                <div class="showcase">
-                    <div class="showcase-container">
-                        <ul class="showcase-menu">
-                            <li>Hi!</li>
-                            <li>Hover over the list items or click them!</li>
-                            <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/124740/ice-final-white.svg" alt=""></li>
-                            <li class="overlay" style="background-image:url(https://images.unsplash.com/photo-1537949721120-e8f21f6698e6?ixlib=rb-0.3.5&s=96527c5eff0b3bd24946f77f4dc5a789&auto=format&fit=crop&w=634&q=80);">
-                                Lorem ipsum
-                            </li>
-                            <li style="background-image:url(https://d2kbkpwf98wmwo.cloudfront.net/images/menu/motion.png);"></li>
-                            <li>ABC</li>
-                            <li style="background-image:url(https://images.unsplash.com/photo-1537914675540-ec9f82fbd752?ixlib=rb-0.3.5&s=7d427165e9b4e7aa8d80b19c9d0b3128&auto=format&fit=crop&w=1316&q=80);"></li>
-                            <li style="background-image:url(https://d2kbkpwf98wmwo.cloudfront.net/images/menu/color.png);"></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="menu">
-                    <ul class="main-menu">
-                        <li class="active"><a href="#!">Introduction</a></li>
-                        <li><a href="#!">The System</a></li>
-                        <li><a href="#!">Logo</a></li>
-                        <li><a href="#!">Composition</a></li>
-                        <li><a href="#!">Motion</a></li>
-                        <li><a href="#!">Typography</a></li>
-                        <li><a href="#!">Photography</a></li>
-                        <li><a href="#!">Color</a></li>
-                    </ul>
-                </div>
-            </nav>
-            
-        </div>
-    </header>
-    
-    <div class="content">
-        <p>
-            Navigation like on the <a href="https://www.uber.design/case-studies/rebrand-2018" target="_blank">Uber Rebrand Site</a>
-        </p>
-    </div>
+	<header class="cd-header">
+		<div class="header-wrapper">
+			<div class="logo-wrap">
+                <img class="header-logo" src="./assets/nocxa_title.svg" alt="">
+				<!-- <a href="#" class="hover-target"><img src="./assets/nocxa_title.svg" alt=""></a> -->
+			</div>
+			<div class="nav-but-wrap">
+				<div class="menu-icon hover-target">
+					<span class="menu-icon__line menu-icon__line-left"></span>
+					<span class="menu-icon__line"></span>
+					<span class="menu-icon__line menu-icon__line-right"></span>
+				</div>					
+			</div>					
+		</div>				
+	</header>
+
+	<div class="nav">
+		<div class="nav__content">
+			<ul class="nav__list">
+				<li class="nav__list-item active-nav"><a href="#" class="hover-target">home</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">about</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">work</a></li>
+				<li class="nav__list-item"><a href="#" class="hover-target">team</a></li>
+                <li class="nav__list-item"><a href="#" class="hover-target">contact</a></li>
+			</ul>
+		</div>
+	</div>		
+
+	<div class="section full-height over-hide">	
+		<div class="switch-wrap">
+            <h1>Nocxa</h1>
+			<h2>we design and build digital products bringing new ideas to life.</h1>
+			<div id="switch" class="hover-target">
+				<div id="circle"></div>
+			</div>
+			<p><span>dark</span> - <span>light</span></p>
+		</div>
+	</div>	
+	
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+    <div class="section full-height over-hide">	
+		<div class="switch-wrap">
+			<h1>Page 2</h1>
+			<div id="switch" class="hover-target">
+				<div id="circle"></div>
+			</div>
+			<p><span>dark</span> - <span>light</span></p>
+		</div>
+	</div>	
 </body>
 <!-- JS -->
 <script src="./js/main.js"></script>

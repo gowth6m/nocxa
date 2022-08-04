@@ -1,144 +1,85 @@
-$(document).ready(function () {
-	navNumbers();
-	backToDefault();
+(function ($) {
+  "use strict";
 
-	// show hovered li stuff
-	$(".main-menu").on("mouseover", "li", function () {
-		showTarget($(this));
-	});
+  //Page cursors
 
-	// show default .active li stuff
-	$(".main-menu").on("mouseleave", backToDefault);
+  document
+    .getElementsByTagName("body")[0]
+    .addEventListener("mousemove", function (n) {
+      (t.style.left = n.clientX + "px"),
+        (t.style.top = n.clientY + "px"),
+        (e.style.left = n.clientX + "px"),
+        (e.style.top = n.clientY + "px"),
+        (i.style.left = n.clientX + "px"),
+        (i.style.top = n.clientY + "px");
+    });
+  var t = document.getElementById("cursor"),
+    e = document.getElementById("cursor2"),
+    i = document.getElementById("cursor3");
+  function n(t) {
+    e.classList.add("hover"), i.classList.add("hover");
+  }
+  function s(t) {
+    e.classList.remove("hover"), i.classList.remove("hover");
+  }
+  s();
+  for (
+    var r = document.querySelectorAll(".hover-target"), a = r.length - 1;
+    a >= 0;
+    a--
+  ) {
+    o(r[a]);
+  }
+  function o(t) {
+    t.addEventListener("mouseover", n), t.addEventListener("mouseout", s);
+  }
 
-	// change active list item
-	$(".main-menu").on("click", "li", function () {
-		changeActive($(this));
-	});
+  //Navigation
 
-	// toggle menu
-	$(".toggle").on("click", toggleMenu);
+  var app = (function () {
+    var body = undefined;
+    var menu = undefined;
+    var menuItems = undefined;
+    var init = function init() {
+      body = document.querySelector("body");
+      menu = document.querySelector(".menu-icon");
+      menuItems = document.querySelectorAll(".nav__list-item");
+      applyListeners();
+    };
+    var applyListeners = function applyListeners() {
+      menu.addEventListener("click", function () {
+        return toggleClass(body, "nav-active");
+      });
+    };
+    var toggleClass = function toggleClass(element, stringClass) {
+      if (element.classList.contains(stringClass))
+        element.classList.remove(stringClass);
+      else element.classList.add(stringClass);
+    };
+    init();
+  })();
 
-	// for showcase only
-	var tl = new TimelineMax(),
-		body = $("body"),
-		header = $("header"),
-		content = $(".content p"),
-		toggle = $(".toggle"),
-		nav = $("nav");
+  //Switch light/dark
 
-	tl.to(body, 1, {
-		padding: "0 80px 80px",
-		delay: 0.5
-	});
+  $("#switch").on("click", function () {
+    if ($("body").hasClass("light")) {
+      $("body").removeClass("light");
+      $("#switch").removeClass("switched");
+    } else {
+      $("body").addClass("light");
+      $("#switch").addClass("switched");
+    }
+  });
+})(jQuery);
 
-	tl.to(header, 0.25, {
-		opacity: 1,
-		delay: 0.5
-	});
 
-	tl.to(
-		content,
-		0.25,
-		{
-			opacity: 1
-		},
-		"-=.25"
-	);
+var plus = './assets/nocxa_title.svg';
+var minus = './assets/nocxa_title_b.svg';
 
-	tl.call(
-		function () {
-			toggleMenu();
-		},
-		null,
-		null,
-		3
-	);
-
-	tl.call(
-		function () {
-			toggleMenu();
-		},
-		null,
-		null,
-		4.5
-	);
-});
-
-// toggle menu
-function toggleMenu() {
-	var toggle = $(".toggle");
-	var nav = $("nav");
-
-	if (toggle.hasClass("clicked")) {
-		toggle.removeClass("clicked");
-		nav.removeClass("open");
-		console.log("remove open");
-		setTimeout(function () {
-			console.log("add hidden");
-			nav.addClass("hidden");
-		}, 500);
-	} else {
-		nav.removeClass("hidden");
-		toggle.addClass("clicked");
-		nav.addClass("open");
-	}
-}
-
-// give the list items numbers
-function navNumbers() {
-	var sum = $(".main-menu li").length;
-	var i = 0;
-	var x = 0;
-
-	$(".showcase-menu li").each(function () {
-		$(this).attr("data-target", x);
-		x++;
-	});
-
-	$(".main-menu li").each(function () {
-		var number = ("0" + i).slice(-2);
-		var numberElement = '<div class="number"><span>' + number + "</span></div>";
-		$(this).prepend(numberElement);
-		$(this).attr("data-target", i);
-		i++;
-	});
-}
-
-// show the hovered list item stuff
-function showTarget(e) {
-	$(".main-menu li").removeClass("hover");
-
-	var target = $(e).attr("data-target");
-	var showcaseHeight = $(".showcase-menu").outerHeight();
-
-	showcaseHeight = showcaseHeight * target * -1;
-
-	$(".showcase-menu").css({
-		top: showcaseHeight
-	});
-
-	$(e).addClass("hover");
-}
-
-// show the list item stuff of .active
-function backToDefault() {
-	$(".main-menu li").removeClass("hover");
-
-	var activeItem = $(".main-menu li.active");
-	var target = activeItem.attr("data-target");
-	var showcaseHeight = $(".showcase-menu").outerHeight();
-
-	showcaseHeight = showcaseHeight * target * -1;
-
-	$(".showcase-menu").css({
-		top: showcaseHeight
-	});
-
-	activeItem.addClass("hover");
-}
-
-// change active list item
-function changeActive(e) {
-	$(".main-menu li").removeClass("active");
-	$(e).addClass("active");
-}
+$('#switch').click(function() {
+  if ($('.header-logo').attr('src') === plus) {
+    $('.header-logo').attr('src', minus);
+  } else {
+    $('.header-logo').attr('src', plus)
+  }
+})
