@@ -229,9 +229,18 @@ a:hover {
 }
 .header-wrapper {
   position: relative;
-  width: 92%;
-  margin-left: 4%;
+  width: 90%;
+  margin-left: 5%;
 }
+
+@media only screen and (min-width: 600px) {
+  .header-wrapper {
+    position: relative;
+    width: 94%;
+    margin-left: 3%;
+  }
+}
+
 .logo-wrap {
   position: absolute;
   /* display: block; */
