@@ -2,7 +2,6 @@
   "use strict";
 
   //Page cursors
-
   document
     .getElementsByTagName("body")[0]
     .addEventListener("mousemove", function (n) {
@@ -35,7 +34,6 @@
   }
 
   //Navigation
-
   var app = (function () {
     var body = undefined;
     var menu = undefined;
@@ -72,8 +70,8 @@
       $("body").removeClass("nav-active");
     }
     if (element.classList.contains(stringClass))
-        element.classList.remove(stringClass);
-      else element.classList.add(stringClass);
+      element.classList.remove(stringClass);
+    else element.classList.add(stringClass);
   });
 
   //Switch light/dark
@@ -89,10 +87,11 @@
 })(jQuery);
 
 
+//Switching logo when changing theme
 var plus = './assets/nocxa_title.svg';
 var minus = './assets/nocxa_title_b.svg';
 
-$('#switch').click(function() {
+$('#switch').click(function () {
   if ($('.header-logo').attr('src') === plus) {
     $('.header-logo').attr('src', minus);
   } else {
@@ -112,3 +111,10 @@ $(function () {
   });
 });
 
+//Nav bar CSS
+$( '.nav__list-item a' ).on( 'click', function () {
+	// $( '.nav__list' ).find( '.nav__list-item.active-nav-btn' ).removeClass( 'active-nav-btn' );
+	// $( this ).parent( '.nav__list-item' ).addClass( 'active-nav-btn' );
+	$( '.nav__list' ).find( '.nav__list-item a.active-nav-btn' ).removeClass( 'active-nav-btn' );
+	$( this ).addClass( 'active-nav-btn' );
+});
