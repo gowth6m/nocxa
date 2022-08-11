@@ -719,9 +719,9 @@ ABOUT US
 }
 
 /*====================================================
-CONTACT: MEET THE TEAM
+TEAM: MEET THE TEAM
 =====================================================*/
-#id {
+#team {
   height: auto;
 }
 
@@ -757,6 +757,62 @@ CONTACT: MEET THE TEAM
     height: 200px;
   }
 }
+
+/*====================================================
+CONTACT: GET IN TOUCH
+=====================================================*/
+.contact-title {
+  margin-top: 10%;
+  font-size: 1.5em;
+}
+
+.contact-form {
+  background-color: var(--mainPurple);
+  padding: 5%;
+  border-radius: 25px;
+}
+
+.contact-form input {
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: none;
+  border:none;
+  font-size: larger;
+  text-align: center;
+  width: 200px;
+}
+
+.contact-submit-btn {
+  padding: 10px 30px;
+  border: var(--mainPurple) 2px solid;
+  border-radius: 25px;
+  color: var(--mainPurple);
+  background-color: var(--mainBlack);
+  font-weight: 900;
+  cursor: pointer;
+  width: 200px;
+}
+
+.contact-form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--mainPurple);
+  opacity: 1; /* Firefox */
+}
+
+.contact-form input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--mainPurple);
+}
+
+.contact-form input::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--mainPurple);
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px){
+  .contact-form {
+    width: 50%;
+  }
+}
+
 
 
 
