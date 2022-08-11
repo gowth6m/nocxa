@@ -36,10 +36,12 @@ OVERALL CSS
 * {
     box-sizing: border-box;
     transition: all ease-in-out 100ms;
+    /* border: 1px solid red; */
 }
 
 html {
     height: -webkit-fill-available;
+    scroll-behavior: smooth;
 }
 
 body,html {
@@ -263,8 +265,8 @@ a:hover {
   display: inline-block;
   float: right;
   padding-left: 15px;
-  padding-top: 15px;
-  margin-top: 26px;
+  padding-top: 30px;
+  /* margin-top: 26px; */
   transition: all 0.3s ease-out;
 }
 .menu-icon {
@@ -524,7 +526,7 @@ body.nav-active .nav__list-item:nth-child(10) {
 }
 
 .switch-wrap {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 0;
   z-index: 10;
@@ -669,33 +671,6 @@ body.light .switch-wrap p span:nth-child(2):before {
 }
 body.light .switch-wrap p span:nth-child(1):before {
   opacity: 0;
-}
-
-/* #Link to page
-================================================== */
-
-.link-to-portfolio {
-  position: fixed;
-  bottom: 40px;
-  right: 50px;
-  z-index: 200;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 3px;
-  background-position: center center;
-  background-size: 65%;
-  background-repeat: no-repeat;
-  background-image: url("https://assets.codepen.io/1462889/fcy.png");
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-  transition: opacity 0.2s, border-radius 0.2s, box-shadow 0.2s;
-  transition-timing-function: ease-out;
-}
-.link-to-portfolio:hover {
-  opacity: 0.8;
-  border-radius: 50%;
-  box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 

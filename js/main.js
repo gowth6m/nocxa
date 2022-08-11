@@ -46,21 +46,37 @@
       menuItems = document.querySelectorAll(".nav__list-item");
       applyListeners();
     };
+
     var applyListeners = function applyListeners() {
       menu.addEventListener("click", function () {
         return toggleClass(body, "nav-active");
       });
     };
+
     var toggleClass = function toggleClass(element, stringClass) {
       if (element.classList.contains(stringClass))
         element.classList.remove(stringClass);
       else element.classList.add(stringClass);
     };
+
     init();
   })();
 
-  //Switch light/dark
+  //Nav clicks
+  var menuItems = document.querySelectorAll(".nav__list-item");
+  var stringClass = "nav-active";
+  var element = document.querySelector(".nav__list-item");
 
+  $(menuItems).on("click", function () {
+    if ($("body").hasClass("nav-active")) {
+      $("body").removeClass("nav-active");
+    }
+    if (element.classList.contains(stringClass))
+        element.classList.remove(stringClass);
+      else element.classList.add(stringClass);
+  });
+
+  //Switch light/dark
   $("#switch").on("click", function () {
     if ($("body").hasClass("light")) {
       $("body").removeClass("light");
@@ -85,6 +101,7 @@ $('#switch').click(function() {
 })
 
 
+//Header background on scoll for navbar
 $(function () {
   $(window).on("scroll", function () {
     if ($(window).scrollTop() > 100) {
@@ -94,3 +111,4 @@ $(function () {
     }
   });
 });
+
