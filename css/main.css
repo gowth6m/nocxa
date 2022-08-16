@@ -706,7 +706,6 @@ ABOUT US
 }
 
 .about-details {
-  border: blueviolet 1px solid;
   width: 100%;
 }
 
@@ -717,8 +716,8 @@ ABOUT US
 /* Vertical tabbing */
 .tabs-wrapper {
   width: 100%;
+  height: auto;
   text-align: center;
-  background: transparent;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -737,32 +736,30 @@ ul.tabs {
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); */
 }
 ul.tabs li {
-  margin: 0;
+  margin: 10px 15px;
   cursor: pointer;
-  padding: 0px 15px;
+  padding: 5px 15px;
   line-height: 31px;
   color: white;
   text-align: left;
   font-weight: bold;
-  background-color: #666;
-  background: none;
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border-radius: 25px;
 }
 ul.tabs li:hover {
-  background: #ae0046;
+  background: var(--mainGrey);
   color: white;
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 ul.tabs li.active {
-  background: #4c001e;
-  color: #dddddd;
+  background: var(--mainGrey);
+  color: var(--mainWhite);
   font-weight: 900;
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -770,18 +767,11 @@ ul.tabs li.active {
 }
 
 .tab-container {
-  display: inline-block;
-  vertical-align: top;
   position: relative;
   z-index: 20;
-  /* left: -2%; */
   width: 70%;
-  /* min-width: 10px; */
-  /* text-align: left; */
+  height: auto;
   background: white;
-  /* border-radius: 12px; */
-  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
-  border: 1px red solid;
 }
 
 .tab_content {
@@ -805,29 +795,10 @@ ul.tabs li.active {
     display: block;
     margin: 0 auto;
     width: 95%;
-    border-top: none;
-    border-radius: 0;
-    box-shadow: 0px 0px 10px black;
+    background-color: transparent;
   }
 
   .tab_drawer_heading {
-    background-color: #ccc;
-    background: #600026;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #600026 0%, #c60943 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #600026), color-stop(100%, #c60943));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #600026 0%, #c60943 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #600026 0%, #c60943 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #600026 0%, #c60943 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #600026 0%, #c60943 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#600026", endColorstr="#c60943",GradientType=0 );
-    /* IE6-9 */
     color: #fff;
     margin: 0;
     padding: 5px 20px;
@@ -840,30 +811,13 @@ ul.tabs li.active {
     -ms-user-select: none;
     user-select: none;
     text-align: center;
+    height: auto;
   }
   .tab_drawer_heading:hover {
-    background: #ccc;
-    background: #ae0046;
-    background: -moz-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ae0046), color-stop(100%, #fb0f56));
-    background: -webkit-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
-    background: -o-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
-    background: -ms-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
-    background: linear-gradient(to bottom, #ae0046 0%, #fb0f56 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ae0046", endColorstr="#fb0f56",GradientType=0 );
     color: white;
   }
 
   .d_active {
-    background: #fff;
-    background: #4c001e;
-    background: -moz-linear-gradient(top, #4c001e 0%, #9f0735 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c001e), color-stop(100%, #9f0735));
-    background: -webkit-linear-gradient(top, #4c001e 0%, #9f0735 100%);
-    background: -o-linear-gradient(top, #4c001e 0%, #9f0735 100%);
-    background: -ms-linear-gradient(top, #4c001e 0%, #9f0735 100%);
-    background: linear-gradient(to bottom, #4c001e 0%, #9f0735 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4c001e", endColorstr="#9f0735",GradientType=0 );
     color: #dddddd;
   }
 }
