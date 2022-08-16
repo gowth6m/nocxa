@@ -116,7 +116,7 @@ $( '.nav__list-item a' ).on( 'click', function () {
 	// $( '.nav__list' ).find( '.nav__list-item.active-nav-btn' ).removeClass( 'active-nav-btn' );
 	// $( this ).parent( '.nav__list-item' ).addClass( 'active-nav-btn' );
 	$( '.nav__list' ).find( '.nav__list-item a.active-nav-btn' ).removeClass( 'active-nav-btn' );
-	$( this ).addClass( 'active-nav-btn' );
+	$(this).addClass( 'active-nav-btn' );
 });
 
 // Vertical tab
@@ -154,4 +154,9 @@ $(".tab_drawer_heading").click(function () {
 
   $("ul.tabs li").removeClass("active");
   $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
+
+  var allTabs = document.querySelectorAll(".tab_drawer_heading");
+
+  $(allTabs).removeClass("active-h");
+  $(this).addClass("active-h");
 });
