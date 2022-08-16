@@ -10,6 +10,7 @@ OVERALL CSS
     --mainPurple: 	#8C52FF;
     --mainWhite: #EFE9F4;
     --mainBlack: #2F242C;
+    --mainGrey: #1f2029;
 }  
 
 * {
@@ -38,8 +39,9 @@ body {
 	min-height: -webkit-fill-available;
 	overflow-x: hidden;
 	background-color: var(--body);
-	color: var(--white);
+	color: var(--mainWhite);
   font-family: "Montserrat", sans-serif;
+  background-color: var(--mainGrey);
 }
 
 img {
@@ -91,6 +93,7 @@ ul{
   flex-direction: column;
   height: 100%;
   width: 96%;
+  margin: 0 auto;
 }
 
 .flex-c {
@@ -118,27 +121,9 @@ ul{
 /*====================================================
 NAVIGATION
 =====================================================*/
-/* Please ❤ this if you like it! */
 
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 
-body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #c4c3ca;
-  background-color: #1f2029;
-  overflow-x: hidden;
-  -webkit-transition: all 300ms linear;
-  transition: all 300ms linear;
-}
-a {
-  cursor: pointer;
-}
-a:hover {
-  text-decoration: none;
-}
 
 /* #Cursor
 ================================================== */
@@ -198,7 +183,7 @@ a:hover {
 
 .section {
   position:relative;
-  max-width: 1366px;
+  /* max-width: 1366px; */
   width: 100%;
   display: block;
   margin: auto;
@@ -541,6 +526,7 @@ body.nav-active .nav__list-item:nth-child(10) {
   margin: 0 auto;
   text-align: center;
 }
+
 .switch-wrap h1 {
   font-weight: 600;
   font-size: 26px;
@@ -701,23 +687,186 @@ body.light .switch-wrap p span:nth-child(1):before {
 ABOUT US
 =====================================================*/
 .about {
-    height: 100vh;
+    height: auto;
     width: 100vw;
-    background-color: rgb(237, 217, 255);
+    background-color: var(--mainPurple);
 }
 
-.about-title {
-    color: var(--mainPurple);
-    font-size: 5em;
-    font-weight: 900;
-    margin-top: -15vh;
+.section-title {
+  font-size: 2em;
 }
 
-.about-intro {
-    color: black;
-    font-size: 2em;
+.about-skills-c {
+  flex-wrap: wrap;
 }
 
+.about-skills-box {
+  background-color: var(--mainGrey);
+  margin: 10px;
+}
+
+.about-details {
+  border: blueviolet 1px solid;
+  width: 100%;
+}
+
+.about-details-t {
+  font-size: 2.5em;
+}
+
+/* Vertical tabbing */
+.tabs-wrapper {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+ul.tabs {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 10;
+  margin: 25px 0 0;
+  padding: 0;
+  width: 23%;
+  min-width: 175px;
+  list-style: none;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); */
+}
+ul.tabs li {
+  margin: 0;
+  cursor: pointer;
+  padding: 0px 15px;
+  line-height: 31px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  background-color: #666;
+  background: none;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+ul.tabs li:hover {
+  background: #ae0046;
+  color: white;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+ul.tabs li.active {
+  background: #4c001e;
+  color: #dddddd;
+  font-weight: 900;
+  -ms-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tab-container {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  z-index: 20;
+  /* left: -2%; */
+  width: 70%;
+  /* min-width: 10px; */
+  /* text-align: left; */
+  background: white;
+  /* border-radius: 12px; */
+  /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); */
+  border: 1px red solid;
+}
+
+.tab_content {
+  padding: 20px;
+  height: 100%;
+  display: none;
+  overflow: hidden;
+  background-color: var(--mainGrey);
+}
+
+.tab_drawer_heading {
+  display: none;
+}
+
+@media screen and (max-width: 781px) {
+  ul.tabs {
+    display: none;
+  }
+
+  .tab-container {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    border-top: none;
+    border-radius: 0;
+    box-shadow: 0px 0px 10px black;
+  }
+
+  .tab_drawer_heading {
+    background-color: #ccc;
+    background: #600026;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #600026 0%, #c60943 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #600026), color-stop(100%, #c60943));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #600026 0%, #c60943 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #600026 0%, #c60943 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #600026 0%, #c60943 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #600026 0%, #c60943 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#600026", endColorstr="#c60943",GradientType=0 );
+    /* IE6-9 */
+    color: #fff;
+    margin: 0;
+    padding: 5px 20px;
+    display: block;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+  }
+  .tab_drawer_heading:hover {
+    background: #ccc;
+    background: #ae0046;
+    background: -moz-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ae0046), color-stop(100%, #fb0f56));
+    background: -webkit-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
+    background: -o-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
+    background: -ms-linear-gradient(top, #ae0046 0%, #fb0f56 100%);
+    background: linear-gradient(to bottom, #ae0046 0%, #fb0f56 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ae0046", endColorstr="#fb0f56",GradientType=0 );
+    color: white;
+  }
+
+  .d_active {
+    background: #fff;
+    background: #4c001e;
+    background: -moz-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4c001e), color-stop(100%, #9f0735));
+    background: -webkit-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -o-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: -ms-linear-gradient(top, #4c001e 0%, #9f0735 100%);
+    background: linear-gradient(to bottom, #4c001e 0%, #9f0735 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4c001e", endColorstr="#9f0735",GradientType=0 );
+    color: #dddddd;
+  }
+}
 /*====================================================
 TEAM: MEET THE TEAM
 =====================================================*/

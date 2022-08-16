@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -66,17 +67,82 @@
 	<div class='cursor2' id="cursor2"></div>
 	<div class='cursor3' id="cursor3"></div>
 
-    <div class="section full-height over-hide" id="about">	
-		<div class="switch-wrap">
-			<h1>About Us</h1>
+    <div class="section full-height over-hide about" id="about">
+		<div class="container-inner">
+			<!-- <div class="section-title">About Us</div> -->
+
+			<div class="about-intro">
+				An experienced team of students with a wide skill set in agile software development and digital design. We'd love to help you bring your ideas to life.
+			</div>
+
+			<div class="about-details flex-c-v">
+				<div class="about-details-t">What can we do</div>
+				<div class="tabs-wrapper">
+					<ul class="tabs">
+					  <li class="active" rel="tab1">Tab 1</li>
+					  <li rel="tab2">Tab 2</li>
+					  <li rel="tab3">Tab 3</li>
+					  <li rel="tab4">Tab 4</li>
+					  <li rel="tab5">Tab 5</li>
+					</ul>
+
+					<div class="tab-container">
+					  <div class="d_active tab_drawer_heading" rel="tab1">Tab 1</div>
+					  <div id="tab1" class="tab_content">
+						<h2>Tab 2 content</h2>
+					  </div>
+					  <!-- #tab1 -->
+					  <div class="tab_drawer_heading" rel="tab2">Tab 2</div>
+					  <div id="tab2" class="tab_content">
+					  	<h2>Tab 2 content</h2>
+					  </div>
+					  <!-- #tab2 -->
+					  <div class="tab_drawer_heading" rel="tab3">Tab 3</div>
+					  <div id="tab3" class="tab_content">
+					  	<h2>Tab 3 content</h2>
+					  </div>
+					  <!-- #tab3 -->
+					  <div class="tab_drawer_heading" rel="tab4">Tab 4</div>
+					  <div id="tab4" class="tab_content">
+					  	<div>Tab 4 content</div>
+					  </div>
+					  <!-- #tab4 -->
+					  <div class="tab_drawer_heading" rel="tab5">Tab 5</div>
+					  <div id="tab5" class="tab_content">
+					  	<h2>Tab 5 content</h2>
+					  </div>
+					</div>
+					<!-- .tab-container -->
+				</div>
+			</div>
+
+			<!-- <div class="about-skills-c flex-c">
+				<div class="about-skills-box">
+					<div class="about-s-b-img"></div>
+					<div class="about-s-b-text">testing</div>
+				</div>
+				<div class="about-skills-box">
+					
+				</div>
+				<div class="about-skills-box">
+					testing
+				</div>
+				<div class="about-skills-box">
+					testing
+				</div>
+				<div class="about-skills-box">
+					testing
+				</div>
+				<div class="about-skills-box">
+					testing
+				</div>
+			</div> -->
+
 			<div>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla iste sint architecto saepe ipsa fugit laboriosam repellendus harum quis? Iste blanditiis veritatis molestiae mollitia repellat nesciunt, laborum repudiandae nulla?
 				<br>
-				<br>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum deleniti quibusdam maxime molestiae perspiciatis placeat sit vitae. Numquam, asperiores pariatur!
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fuga ipsum earum blanditiis sapiente dignissimos veritatis? Hic fugit doloremque error illum, autem consectetur qui rem. Ducimus possimus illo perspiciatis rem unde laudantium vitae voluptatum optio, incidunt accusamus perferendis provident cum!
 			</div>
-		</div>
+		</div>	
 	</div>	
 
 	<!-- <div class="section full-height over-hide" id="work">	
@@ -88,7 +154,7 @@
 	<div class="section over-hide" id="team">	
 		<!-- <div class="switch-wrap"> -->
 			<div class="team-title">Meet Our Team</div>
-			<div class="team-display flex-c">
+			<div class="team-display flex-c-v">
 				<div class="team-display-box hover-target">
 
 				</div>
@@ -120,7 +186,7 @@
 
 	</div class="section over-hide">
 	
-	
+
     </div>
 </body>
 <!-- JS -->
