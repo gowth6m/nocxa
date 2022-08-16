@@ -691,15 +691,17 @@ ABOUT US
 
 .about-bg-text {
   position: absolute;
-  top: -8%;
+  top: 10%;
   left: 33%;
-  font-size: 10em;
+  font-size: 12em;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.1);
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+  text-align: left;
+  line-height: 80%;
 }
 
 .section-title {
@@ -731,7 +733,7 @@ ABOUT US
   margin: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
 }
 
@@ -742,13 +744,13 @@ ul.tabs {
   z-index: 10;
   margin: 0;
   padding: 0;
-  width: 30%;
+  width: 50%;
   min-width: 175px;
   list-style: none;
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  font-size: 1.2em;
+  font-size: 1.6em;
 }
 ul.tabs li {
   margin: 10px 15px;
@@ -784,7 +786,7 @@ ul.tabs li.active {
   z-index: 20;
   width: 60%;
   height: auto;
-  background: white;
+  background: transparent;
 }
 
 .tab_content {
@@ -793,13 +795,16 @@ ul.tabs li.active {
   width: 100%;
   display: none;
   overflow: hidden;
-  background-color: var(--mainGrey);
+  /* background-color: var(--mainGrey); */
+  background-color: transparent;
 }
 
 .tab-img {
-  background-color: var(--mainWhite);
-  height: 200px;
-  width: 100%;
+  /* background-color: var(--mainWhite); */
+  max-height: 20em;
+  width: auto;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .tab_drawer_heading {
