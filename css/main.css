@@ -792,7 +792,8 @@ ul.tabs li.active {
   }
 
   .tab-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 95%;
     background-color: transparent;
@@ -804,12 +805,12 @@ ul.tabs li.active {
     padding: 5px 20px;
     display: block;
     cursor: pointer;
-    -webkit-touch-callout: none;
+    /* -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
+    user-select: none; */
     text-align: center;
     height: auto;
   }
@@ -845,6 +846,7 @@ TEAM: MEET THE TEAM
   height: 200px;
   border-radius: 25px;
 }
+
 
 /* #### Desktops #### */
 @media screen and (min-width: 1024px){
