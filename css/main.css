@@ -755,7 +755,7 @@ ul.tabs {
 ul.tabs li {
   margin: 10px 15px;
   cursor: pointer;
-  padding: 10px 25px;
+  padding: 15px 55px;
   line-height: 31px;
   color: white;
   text-align: left;
@@ -763,7 +763,7 @@ ul.tabs li {
   -ms-transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  border-radius: 25px;
+  border-radius: 55px;
 }
 ul.tabs li:hover {
   background: var(--mainGrey);
@@ -797,6 +797,11 @@ ul.tabs li.active {
   overflow: hidden;
   /* background-color: var(--mainGrey); */
   background-color: transparent;
+}
+
+.tab_content_info {
+  max-width: 70%;
+  text-align: left;
 }
 
 .tab-img {
