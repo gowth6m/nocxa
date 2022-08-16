@@ -109,14 +109,11 @@ ul{
   flex-direction: column;
 }
 
-/* @media screen and (min-width: 1920px) {
-  .max-width-container {
-    max-width: 1920px;
-    overflow: hidden;
-    margin: auto;
-    width: 50%;
-  }
-} */
+.max-width-container {
+  max-width: 1366px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 
 /*====================================================
 NAVIGATION
@@ -688,7 +685,7 @@ ABOUT US
 =====================================================*/
 .about {
     height: auto;
-    width: 100vw;
+    width: 100%;
     background-color: var(--mainPurple);
 }
 
@@ -777,9 +774,16 @@ ul.tabs li.active {
 .tab_content {
   padding: 20px;
   height: 100%;
+  width: 100%;
   display: none;
   overflow: hidden;
   background-color: var(--mainGrey);
+}
+
+.tab-img {
+  background-color: brown;
+  height: 200px;
+  width: 100%;
 }
 
 .tab_drawer_heading {
@@ -805,12 +809,12 @@ ul.tabs li.active {
     padding: 5px 20px;
     display: block;
     cursor: pointer;
-    /* -webkit-touch-callout: none;
+    -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; */
+    user-select: none;
     text-align: center;
     height: auto;
   }

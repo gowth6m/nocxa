@@ -20,12 +20,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="max-width-container">
+	<!-- NAVIGATION -->
 	<header class="cd-header">
 		<div class="header-wrapper">
 			<div class="logo-wrap">
                 <img class="header-logo" src="./assets/nocxa_title.svg" alt="">
-				<!-- <a href="#" class="hover-target"><img src="./assets/nocxa_title.svg" alt=""></a> -->
 			</div>
 			<div class="nav-but-wrap">
 				<div class="menu-icon hover-target">
@@ -36,7 +35,6 @@
 			</div>					
 		</div>				
 	</header>
-
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
@@ -49,6 +47,12 @@
 		</div>
 	</div>		
 
+	<!-- CURSOR -->
+	<div class='cursor' id="cursor"></div>
+	<div class='cursor2' id="cursor2"></div>
+	<div class='cursor3' id="cursor3"></div>
+
+	<!-- HOME -->
 	<div class="section full-height over-hide" id="home">	
 		<div class="switch-wrap flex-c-v">
             <h1>Nocxa</h1>
@@ -63,88 +67,59 @@
 		</div>
 	</div>	
 	
-	<div class='cursor' id="cursor"></div>
-	<div class='cursor2' id="cursor2"></div>
-	<div class='cursor3' id="cursor3"></div>
-
+	<!-- ABOUT -->
     <div class="section over-hide about" id="about">
-			<!-- <div class="section-title">About Us</div> -->
-			<!-- <div class="about-intro">
+		<div class="max-width-container">
+			<div class="section-title">About Us</div>
+			<div class="about-intro">
 				An experienced team of students with a wide skill set in agile software development and digital design. We'd love to help you bring your ideas to life.
-			</div> -->
-
-		<div class="about-details flex-c-v">
-			<!-- <div class="about-details-t">WHAT CAN WE DO</div> -->
-			<div class="tabs-wrapper">
-				<ul class="tabs">
-					<li class="active hover-target" rel="tab1">Web Development</li>
-					<li class="hover-target" rel="tab2">App Development</li>
-					<li class="hover-target" rel="tab3">Data Science</li>
-					<li class="hover-target" rel="tab4">Logo Design & Art</li>
-				</ul>
-
-				<div class="tab-container">
-					<!-- #tab1 -->
-					<div class="d_active tab_drawer_heading" rel="tab1">Tab 1 - </div>
-					<div id="tab1" class="tab_content">
-						<div>Tab 1 content</div>
-						<div class="tab-img"></div>
-					</div>
-					<!-- #tab2 -->
-					<div class="tab_drawer_heading" rel="tab2">Tab 2 - </div>
-					<div id="tab2" class="tab_content">
-						<div>Tab 2 content</div>
-						<div class="tab-img"></div>
-					</div>
-					<!-- #tab3 -->
-					<div class="tab_drawer_heading" rel="tab3">Tab 3 - </div>
-					<div id="tab3" class="tab_content">
-						<div>Tab 3 content</div>
-						<div class="tab-img"></div>
-					</div>
-					<!-- #tab4 -->
-					<div class="tab_drawer_heading" rel="tab4">Tab 4 - </div>
-					<div id="tab4" class="tab_content">
-						<div>Tab 4 content</div>
-						<div class="tab-img"></div>
-					</div>
-					</div>
-				</div>
-				<!-- .tab-container -->
 			</div>
-		</div>
 
-			<!-- <div class="about-skills-c flex-c">
-				<div class="about-skills-box">
-					<div class="about-s-b-img"></div>
-					<div class="about-s-b-text">testing</div>
+			<div class="about-details flex-c-v">
+			<!-- <div class="about-details-t">WHAT CAN WE DO</div> -->
+				<div class="tabs-wrapper">
+					<ul class="tabs">
+						<li class="active hover-target" rel="tab1">Web Development</li>
+						<li class="hover-target" rel="tab2">App Development</li>
+						<li class="hover-target" rel="tab3">Data Science</li>
+						<li class="hover-target" rel="tab4">Logo Design & Art</li>
+					</ul>
+
+					<div class="tab-container">
+						<!-- #tab1 -->
+						<div class="d_active tab_drawer_heading" rel="tab1">Web Development</div>
+						<div id="tab1" class="tab_content">
+							<div>Tab 1 content</div>
+							<div class="tab-img"></div>
+						</div>
+						<!-- #tab2 -->
+						<div class="tab_drawer_heading" rel="tab2">App Development</div>
+						<div id="tab2" class="tab_content flex-c-v">
+							<div>Tab 2 content</div>
+							<div class="tab-img"></div>
+						</div>
+						<!-- #tab3 -->
+						<div class="tab_drawer_heading" rel="tab3">Data Science</div>
+						<div id="tab3" class="tab_content">
+							<div>Tab 3 content</div>
+							<div class="tab-img"></div>
+						</div>
+						<!-- #tab4 -->
+						<div class="tab_drawer_heading" rel="tab4">Logo Design & Art</div>
+						<div id="tab4" class="tab_content">
+							<div>Tab 4 content</div>
+							<div class="tab-img"></div>
+						</div>
+					</div>
 				</div>
-				<div class="about-skills-box">
-					
-				</div>
-				<div class="about-skills-box">
-					testing
-				</div>
-				<div class="about-skills-box">
-					testing
-				</div>
-				<div class="about-skills-box">
-					testing
-				</div>
-				<div class="about-skills-box">
-					testing
-				</div>
-			</div> -->	
+			</div>
+
+		</div>
 	</div>	
 
-	<!-- <div class="section full-height over-hide" id="work">	
-		<div class="switch-wrap">
-			<h1>Our Work</h1>
-		</div>
-	</div> -->
-
+	<!-- TEAM -->
 	<div class="section over-hide" id="team">	
-		<!-- <div class="switch-wrap"> -->
+		<div class="max-width-container">
 			<div class="team-title">Meet Our Team</div>
 			<div class="team-display flex-c-v">
 				<div class="team-display-box hover-target">
@@ -160,17 +135,20 @@
 					
 				</div>
 			</div>
-		<!-- </div> -->
+		</div>
 	</div>
 
+	<!-- CONTACT -->
 	<div class="section full-height over-hide" id="contact">	
-		<div class="flex-c-v">
-			<div class="contact-title">Get in touch!</div>
-			<form class="contact-form flex-c-v" action="" method="POST">
-				<input type="text" name="name" placeholder="Name" required>
-				<input type="email" name="email" placeholder="Email" required>
-				<button class="contact-submit-btn hover-target" type="submit">Send</button>
-			</form>
+		<div class="max-width-container">
+			<div class="flex-c-v">
+				<div class="contact-title">Get in touch!</div>
+				<form class="contact-form flex-c-v" action="" method="POST">
+					<input type="text" name="name" placeholder="Name" required>
+					<input type="email" name="email" placeholder="Email" required>
+					<button class="contact-submit-btn hover-target" type="submit">Send</button>
+				</form>
+			</div>
 		</div>
 	</div>
 
@@ -178,8 +156,6 @@
 
 	</div class="section over-hide">
 	
-
-    </div>
 </body>
 <!-- JS -->
 <script src="./js/main.js"></script>
