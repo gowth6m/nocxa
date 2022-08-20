@@ -958,7 +958,7 @@ CONTACT: GET IN TOUCH
   border:none;
   font-size: 1em;
   text-align: center;
-  width: 200px;
+  width: 16em;
   padding: 5px;
 }
 
@@ -969,7 +969,7 @@ CONTACT: GET IN TOUCH
   border:none;
   font-size: 1em;
   text-align: center;
-  width: 200px;
+  width: 16em;
   padding: 5px;
 }
 
@@ -981,7 +981,7 @@ CONTACT: GET IN TOUCH
   background-color: var(--mainBlack);
   font-weight: 900;
   cursor: pointer;
-  width: 200px;
+  width: 16em;
   margin: 5px;
 }
 
