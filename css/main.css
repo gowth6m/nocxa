@@ -644,6 +644,7 @@ body.light .switch-wrap p span:nth-child(1):before {
   display: flex;
   align-items: center;
   justify-self: center;
+  margin: 20px auto;
 }
 
 .contact-page-btn a {
@@ -658,7 +659,8 @@ HOME PAGE
 .home-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
-  font-size: 5em;
+  /* font-size: 5em; */
+  font-size: max(4.5em, 10vw);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--mainWhite);
   color: var(--mainGrey);
@@ -812,17 +814,18 @@ ul.tabs li.active {
   width: 100%;
   display: none;
   overflow: hidden;
-  /* background-color: var(--mainGrey); */
   background-color: transparent;
+  transition: all 500ms;
 }
 
 .tab_content_info {
   max-width: 70%;
+  margin: 0 auto;
   text-align: left;
+  transition: all 500ms;
 }
 
 .tab-img {
-  /* background-color: var(--mainWhite); */
   max-height: 20em;
   width: auto;
   object-fit: cover;
@@ -833,7 +836,7 @@ ul.tabs li.active {
   display: none;
 }
 
-@media screen and (max-width: 781px) {
+@media screen and (max-width: 768px) {
   ul.tabs {
     display: none;
   }
@@ -868,6 +871,7 @@ ul.tabs li.active {
     border-radius: 25px;
     padding: 10px 15px;
     margin: 10px 0; 
+    transition: 1000ms;
   }
   .tab_drawer_heading:hover {
     color: white;
@@ -880,6 +884,17 @@ ul.tabs li.active {
   .active-h {
     color: var(--mainGrey) !important;
     background-color: var(--mainWhite) !important;
+  }
+
+  .tab_content_info {
+    max-width: 100%;
+  }
+
+  .about-details-t {
+    font-size: 1.6em;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
   }
 }
 /*====================================================
