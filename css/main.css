@@ -991,9 +991,9 @@ CONTACT: GET IN TOUCH
   border-radius: 25px;
   box-shadow: none;
   border:none;
-  font-size: 1em;
+  font-size: max(1em, 1.3vw);
   text-align: center;
-  width: 16em;
+  width: max(10em, 95%);
   padding: 5px;
 }
 
@@ -1002,14 +1002,15 @@ CONTACT: GET IN TOUCH
   border-radius: 25px;
   box-shadow: none;
   border:none;
-  font-size: 1em;
+  font-size: max(1em, 1.3vw);
   text-align: center;
-  width: 16em;
+  width: max(10em, 95%);
   padding: 5px;
 }
 
 .contact-submit-btn {
   padding: 10px 30px;
+  font-size: max(1em, 1.3vw);
   border: var(--mainPurple) 2px solid;
   border-radius: 25px;
   color: var(--mainWhite);
@@ -1017,7 +1018,7 @@ CONTACT: GET IN TOUCH
   font-weight: 900;
   cursor: pointer;
   width: 16em;
-  margin: 5px;
+  margin: 5px 5px 15px 5px;
 }
 
 /* #### Desktops #### */
