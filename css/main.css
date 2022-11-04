@@ -126,6 +126,11 @@ ul{
 #website {
   visibility: hidden;
 }
+
+.hideme
+{
+    opacity:0;
+}
 /*====================================================
 PRELOADER
 =====================================================*/
@@ -789,8 +794,8 @@ ABOUT US
 
 .about-bg-text {
   position: absolute;
-  top: 10%;
-  left: 33%;
+  /* top: 2%; */
+  left: 50%;
   font-size: 12em;
   font-weight: 900;
   color: rgba(255, 255, 255, 0.1);
@@ -798,8 +803,12 @@ ABOUT US
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
-  text-align: left;
+  text-align: center;
   line-height: 80%;
+  transition: 0s ease;
+  margin-top: -20%;
+  padding: 0;
+  width: 100vw;
 }
 
 .section-title {
@@ -825,7 +834,7 @@ ABOUT US
   width: 100%;
   padding: 10px 60px;
   font-weight: 900;
-  font-size: max(2.5em, 5vw);
+  font-size: max(2.5em, 4.5vw);
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--mainWhite);
 }
@@ -903,10 +912,12 @@ ul.tabs li.active {
 }
 
 .tab_content_info {
-  max-width: 70%;
+  max-width: 75%;
   margin: 0 auto;
   text-align: left;
   transition: all 500ms;
+  border-radius: 20px;
+  font-weight: 600;
 }
 
 .tab-img {
