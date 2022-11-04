@@ -144,12 +144,12 @@ PRELOADER
 
 .preloader svg path:nth-of-type(2) {
   transform-origin: center; 
-  animation: rotate 3.5s ease infinite;
+  animation: rotate 2s ease infinite;
 }
 
 .preloader svg path:nth-of-type(4) {
   transform-origin: center; 
-  animation: rotate 3.5s ease infinite;
+  animation: rotate 2s ease infinite;
 }
 
 @media screen and (min-width: 425px) {

@@ -295,8 +295,13 @@
       var loader = document.getElementById("preloader");
 	  var website = document.getElementById("website");
       window.addEventListener("load", function () {
-        loader.style.display = 'none';
-		website.style.visibility = 'visible';
+        // loader.style.display = 'none';
+		// website.style.visibility = 'visible';
+
+		setTimeout( function() {
+            loader.style.display = 'none';
+			website.style.visibility = 'visible';
+        }, 1000 );
       });
     </script>
   </body>
