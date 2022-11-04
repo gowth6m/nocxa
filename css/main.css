@@ -136,6 +136,8 @@ PRELOADER
   position: fixed;
   z-index: 1000;
   transition: all ease-in-out 100ms;
+  transform-origin: center; 
+  animation: bigger 2s ease infinite;
 }
 
 .preloader svg {
@@ -162,9 +164,14 @@ PRELOADER
 @keyframes rotate {
   0% {
     transform: translate(0, 0px);
-    transform: scaleY(0.0);
   }
-  1% {
+  2% {
+    transform: scaleY(0.001);
+  }
+  5% {
+    transform: scaleY(0);
+  }
+  6% {
     transform: scaleY(0.001);
   }
   25% {
@@ -178,7 +185,18 @@ PRELOADER
   }
   100% {
     transform: translate(-2px, -2px);
-    transform: scaleY(0.001);
+  }
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 
@@ -264,9 +282,6 @@ NAVIGATION
 .cd-header {
   position: fixed;
   width: 100%;
-  /* left: 50%;
-  transform: translateX(-50%);
-  max-width: 1366px; */
   top: 0;
   left: 0;
   z-index: 100;
