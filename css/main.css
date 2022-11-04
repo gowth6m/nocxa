@@ -1098,6 +1098,12 @@ CONTACT: GET IN TOUCH
 }
 
 /* #### Desktops #### */
+@media screen and (min-width: 500px){
+  .contact-form {
+    width: 60%;
+  }
+}
+
 @media screen and (min-width: 1024px){
   .contact-form {
     width: 50%;
