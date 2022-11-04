@@ -1149,12 +1149,13 @@ FOOTER
   padding: 30px 0;
 }
 
-.footer-socials i {
+.footer-socials a i {
   padding: var(--padding-sm);
+  color: var(--mainWhite);
 }
 
-.footer-socials i:focus,
-.footer-socials i:hover {
+.footer-socials a i:focus,
+.footer-socials a i:hover {
   cursor: pointer;
 }
 
@@ -1183,7 +1184,7 @@ FOOTER
     align-items: center;
   }
 
-  .footer-socials i {
+  .footer-socials a i {
     padding: 5px;
   }
 
