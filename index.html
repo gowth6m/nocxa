@@ -295,11 +295,8 @@
       var loader = document.getElementById("preloader");
 	  var website = document.getElementById("website");
       window.addEventListener("load", function () {
-        // loader.style.display = 'none';
-		// website.style.visibility = 'visible';
-
 		setTimeout( function() {
-            loader.style.display = 'none';
+            loader.style.height = '0';
 			website.style.visibility = 'visible';
         }, 1000 );
       });

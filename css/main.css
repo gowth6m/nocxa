@@ -135,7 +135,7 @@ PRELOADER
   width: 100vw;
   position: fixed;
   z-index: 1000;
-  transition: all ease-in-out 1000ms;
+  transition: all ease-in-out 100ms;
 }
 
 .preloader svg {
@@ -162,16 +162,13 @@ PRELOADER
 @keyframes rotate {
   0% {
     transform: translate(0, 0px);
-  }
-  5% {
-    transform: scaleY(0.001);
-  }
-  29% {
     transform: scaleY(0.0);
   }
-  30% {
-    transform: translate(-15px, 15px);
+  1% {
     transform: scaleY(0.001);
+  }
+  25% {
+    transform: translate(-15px, 15px);
   }
   50% {
     transform: translate(0px, 10px);
@@ -181,7 +178,7 @@ PRELOADER
   }
   100% {
     transform: translate(-2px, -2px);
-    /* transform: scaleY(0.1); */
+    transform: scaleY(0.001);
   }
 }
 
