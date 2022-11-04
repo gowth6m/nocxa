@@ -123,6 +123,69 @@ ul{
   margin: 0 auto;
 }
 
+#website {
+  visibility: hidden;
+}
+/*====================================================
+PRELOADER
+=====================================================*/
+.preloader {
+  background-color: var(--mainBlack);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1000;
+  transition: all ease-in-out 1000ms;
+}
+
+.preloader svg {
+  width: 50%;
+}
+
+.preloader svg path:nth-of-type(2) {
+  transform-origin: center; 
+  animation: rotate 3.5s ease infinite;
+}
+
+.preloader svg path:nth-of-type(4) {
+  transform-origin: center; 
+  animation: rotate 3.5s ease infinite;
+}
+
+@media screen and (min-width: 425px) {
+  .preloader svg {
+    width: 15%;
+  }
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: translate(0, 0px);
+  }
+  5% {
+    transform: scaleY(0.001);
+  }
+  29% {
+    transform: scaleY(0.0);
+  }
+  30% {
+    transform: translate(-15px, 15px);
+    transform: scaleY(0.001);
+  }
+  50% {
+    transform: translate(0px, 10px);
+  }
+  75% {
+    transform: translate(15px, -15px);
+  }
+  100% {
+    transform: translate(-2px, -2px);
+    /* transform: scaleY(0.1); */
+  }
+}
+
+
 /*====================================================
 NAVIGATION
 =====================================================*/
