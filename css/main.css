@@ -10,8 +10,15 @@ OVERALL CSS
     --white: #1d1d1d;
     --mainPurple: 	#8C52FF;
     --mainWhite: #EFE9F4;
-    --mainBlack: #2F242C;
+    --mainBlack: #070707;
     --mainGrey: #1f2029;
+    --melon: #FCBFB7;
+    --apple: #BDF7B7;
+
+    --padding-sm: 10px;
+    --padding-md: 20px;
+    --padding-lg: 30px;
+    --padding-xlg: 40px;
 }  
 
 * {
@@ -1004,6 +1011,92 @@ CONTACT: GET IN TOUCH
 @media screen and (min-width: 1024px){
   .contact-form {
     width: 50%;
+  }
+}
+
+/*====================================================
+FOOTER
+=====================================================*/
+.footer {
+  height: auto;
+  width: 100%;
+  background-color: var(--mainBlack);
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--padding-lg);
+}
+
+.footer-list-item {
+  width: fit-content;
+  padding: var(--padding-sm);
+  font-weight: 600;
+  color: var(--mainWhite);
+}
+
+.footer-list-item:focus,
+.footer-list-item:hover {
+  color: var(--mainPurple);
+}
+
+.footer-brand {
+  padding: 20px 5px;
+}
+
+.footer-brand-logo {
+  padding: var(--padding-md);
+}
+
+.footer-brand-logo img {
+  height: 60px;
+  width: auto;
+}
+
+.footer-socials {
+  padding: 30px 0;
+}
+
+.footer-socials i {
+  padding: var(--padding-sm);
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 768px){
+  .footer-inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-list {
+    flex: 1.5;
+    order: 2;
+    height: 100%;
+  }
+
+  .footer-socials {
+    flex: 1;
+    order: 3;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-socials i {
+    padding: 0;
+  }
+
+  .footer-brand {
+    flex: 1;
+    order: 1;
+    height: 100%;
   }
 }
 

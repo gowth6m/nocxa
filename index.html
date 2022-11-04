@@ -1,131 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Website of Nocxa - a student-led software development agency.">
-    <meta name="keywords" content="webdesign, web development, UX, UI, apps, graphic design, software engineering">
-    <meta property="og:image" content="">
-    <meta name="author" content="Nocxa">
-    <link href="./assets/nocxa.png" type="image/x-icon" rel="shortcut icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Website of Nocxa - a student-led software development agency."
+    />
+    <meta
+      name="keywords"
+      content="webdesign, web development, UX, UI, apps, graphic design, software engineering"
+    />
+    <meta property="og:image" content="" />
+    <meta name="author" content="Nocxa" />
+    <link href="./assets/nocxa.png" type="image/x-icon" rel="shortcut icon" />
     <title>Nocxa</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
-	<!-- NAVIGATION -->
-	<header class="cd-header">
-		<div class="header-wrapper">
-			<div class="logo-wrap">
-                <img class="header-logo" src="./assets/nocxa_title.svg" alt="">
-			</div>
-			<div class="nav-but-wrap">
-				<div class="menu-icon hover-target">
-					<span class="menu-icon__line menu-icon__line-left"></span>
-					<span class="menu-icon__line"></span>
-					<span class="menu-icon__line menu-icon__line-right"></span>
-				</div>					
-			</div>					
-		</div>				
-	</header>
-	<div class="nav">
-		<div class="nav__content">
-			<ul class="nav__list">
-				<li class="nav__list-item"><a href="#home" class="hover-target active-nav-btn">home</a></li>
-				<li class="nav__list-item"><a href="#about" class="hover-target">about</a></li>
-				<li class="nav__list-item"><a href="#work" class="hover-target">work</a></li>
-				<li class="nav__list-item"><a href="#team" class="hover-target">team</a></li>
-                <li class="nav__list-item"><a href="#contact" class="hover-target">contact</a></li>
-			</ul>
-		</div>
-	</div>		
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <header class="cd-header">
+      <div class="header-wrapper">
+        <div class="logo-wrap">
+          <img class="header-logo" src="./assets/nocxa_title.svg" alt="logo" />
+        </div>
+        <div class="nav-but-wrap">
+          <div class="menu-icon hover-target">
+            <span class="menu-icon__line menu-icon__line-left"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line menu-icon__line-right"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="nav">
+      <div class="nav__content">
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a href="#home" class="hover-target active-nav-btn">home</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#about" class="hover-target">about</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#work" class="hover-target">work</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#team" class="hover-target">team</a>
+          </li>
+          <li class="nav__list-item">
+            <a href="#contact" class="hover-target">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-	<!-- CURSOR -->
-	<div class='cursor' id="cursor"></div>
-	<div class='cursor2' id="cursor2"></div>
-	<div class='cursor3' id="cursor3"></div>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor2" id="cursor2"></div>
+    <div class="cursor3" id="cursor3"></div>
 
-	<!-- HOME -->
-	<div class="section full-height over-hide" id="home">	
-		<div class="switch-wrap flex-c-v">
-            <div class="home-title">Nocxa</div>
-			<!-- <div class="home-sub-t plax">we build and design digital products <span class="typed-text"> </span><span class="typed-text-cursor">|</span></div> -->
-			<div class="home-sub-t">we design and build digital products bringing new ideas to life.</div>
-			<!-- <div id="switch" class="hover-target">
+    <!-- HOME -->
+    <div class="section full-height over-hide" id="home">
+      <div class="switch-wrap flex-c-v">
+        <div class="home-title">Nocxa</div>
+        <!-- <div class="home-sub-t plax">we build and design digital products <span class="typed-text"> </span><span class="typed-text-cursor">|</span></div> -->
+        <div class="home-sub-t">
+          we design and build digital products bringing new ideas to life.
+        </div>
+        <!-- <div id="switch" class="hover-target">
 				<div id="circle"></div>
 			</div>
 			<p><span>dark</span> - <span>light</span></p> -->
-			<div class="contact-page-btn hover-target">
-				<a href="#contact">Get in touch</a>
-			</div>
-		</div>
-	</div>	
-	
-	<!-- ABOUT -->
+        <div class="contact-page-btn hover-target">
+          <a href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
     <div class="section over-hide about" id="about">
-		<div class="about-bg-text">ABOUT <br>US</div>
-		<div class="max-width-container">
-			<!-- <div class="section-title">About Us</div> -->
-			<!-- <div class="about-intro">
+      <div class="about-bg-text">ABOUT <br />US</div>
+      <div class="max-width-container">
+        <!-- <div class="section-title">About Us</div> -->
+        <!-- <div class="about-intro">
 				An experienced team of students with a wide skill set in agile software development and digital design. We'd love to help you bring your ideas to life.
 				<br>
 			</div> -->
 
-			<div class="about-details flex-c-v">
-			<div class="about-details-t">WHAT CAN WE DO</div>
-				<div class="tabs-wrapper">
-					<ul class="tabs">
-						<li class="active hover-target" rel="tab1">Web Development</li>
-						<li class="hover-target" rel="tab2">App Development</li>
-						<li class="hover-target" rel="tab3">Desktop Apps</li>
-						<li class="hover-target" rel="tab5">Logo Design & Art</li>
-					</ul>
+        <div class="about-details flex-c-v">
+          <div class="about-details-t">WHAT CAN WE DO</div>
+          <div class="tabs-wrapper">
+            <ul class="tabs">
+              <li class="active hover-target" rel="tab1">Web Development</li>
+              <li class="hover-target" rel="tab2">App Development</li>
+              <li class="hover-target" rel="tab3">Desktop Apps</li>
+              <li class="hover-target" rel="tab5">Logo Design & Art</li>
+            </ul>
 
-					<div class="tab-container">
-						<!-- #tab1 -->
-						<div class="active-h tab_drawer_heading" rel="tab1">Web Development</div>
-						<div id="tab1" class="tab_content">
-							<!-- <div>________</div> -->
-							<img src="./assets/websitee.png" class="tab-img"></img>
-							<div class="tab_content_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur veniam alias at? Quae quidem rem nostrum. Aspernatur, at dolores!</div>
-						</div>
-						<!-- #tab2 -->
-						<div class="tab_drawer_heading" rel="tab2">App Development</div>
-						<div id="tab2" class="tab_content flex-c-v">
-							<!-- <div>________</div> -->
-							<img src="./assets/phonee.png" class="tab-img"></img>
-							<div class="tab_content_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur veniam alias at? Quae quidem rem nostrum. Aspernatur, at dolores!</div>
-						</div>
-						<!-- #tab3 -->
-						<div class="tab_drawer_heading" rel="tab3">Desktop Apps</div>
-						<div id="tab3" class="tab_content">
-							<!-- <div>________</div> -->
-							<img src="./assets/data.webp" class="tab-img"></img>
-							<div class="tab_content_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur veniam alias at? Quae quidem rem nostrum. Aspernatur, at dolores!</div>
-						</div>
-						<!-- #tab4 -->
-						<div class="tab_drawer_heading" rel="tab5">Logo Design & Art</div>
-						<div id="tab5" class="tab_content">
-							<!-- <div>________</div> -->
-							<img src="./assets/art.jpeg" class="tab-img"></img>
-							<div class="tab_content_info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consectetur veniam alias at? Quae quidem rem nostrum. Aspernatur, at dolores!</div>
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="tab-container">
+              <!-- #tab1 -->
+              <div class="active-h tab_drawer_heading" rel="tab1">
+                Web Development
+              </div>
+              <div id="tab1" class="tab_content">
+                <!-- <div>________</div> -->
+                <img src="./assets/websitee.png" class="tab-img" />
+                <div class="tab_content_info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  consectetur veniam alias at? Quae quidem rem nostrum.
+                  Aspernatur, at dolores!
+                </div>
+              </div>
+              <!-- #tab2 -->
+              <div class="tab_drawer_heading" rel="tab2">App Development</div>
+              <div id="tab2" class="tab_content flex-c-v">
+                <!-- <div>________</div> -->
+                <img src="./assets/phonee.png" class="tab-img" />
+                <div class="tab_content_info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  consectetur veniam alias at? Quae quidem rem nostrum.
+                  Aspernatur, at dolores!
+                </div>
+              </div>
+              <!-- #tab3 -->
+              <div class="tab_drawer_heading" rel="tab3">Desktop Apps</div>
+              <div id="tab3" class="tab_content">
+                <!-- <div>________</div> -->
+                <img src="./assets/data.webp" class="tab-img" />
+                <div class="tab_content_info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  consectetur veniam alias at? Quae quidem rem nostrum.
+                  Aspernatur, at dolores!
+                </div>
+              </div>
+              <!-- #tab4 -->
+              <div class="tab_drawer_heading" rel="tab5">Logo Design & Art</div>
+              <div id="tab5" class="tab_content">
+                <!-- <div>________</div> -->
+                <img src="./assets/art.jpeg" class="tab-img" />
+                <div class="tab_content_info">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+                  consectetur veniam alias at? Quae quidem rem nostrum.
+                  Aspernatur, at dolores!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		</div>
-	</div>	
-
-	<!-- TEAM -->
-	<!-- <div class="section over-hide" id="team">	
+    <!-- TEAM -->
+    <!-- <div class="section over-hide" id="team">	
 		<div class="max-width-container">
 			<div class="team-title">Meet Our Team</div>
 			<div class="team-display flex-c-v">
@@ -145,29 +192,64 @@
 		</div>
 	</div> -->
 
-	<!-- CONTACT -->
-	<div class="section full-height over-hide" id="contact">	
-		<div class="max-width-container full-h">
-			<div class="flex-c-v full-h">
-				<div class="container-centering">
-					<!-- <div class="contact-title">Get in touch!</div> -->
-					<form class="contact-form flex-c-v" action="https://formsubmit.co/913dcdc22053ca7abfe5f79b178b8ed6" method="POST">
-						<input type="text" name="name" placeholder="Name" required>
-						<input type="email" name="email" placeholder="Email" required>
-						<textarea type="text" name="message" placeholder="Message" rows="6" required></textarea>
-						<button class="contact-submit-btn hover-target" type="submit">Send</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+    <!-- CONTACT -->
+    <div class="section full-height over-hide" id="contact">
+      <div class="max-width-container full-h">
+        <div class="flex-c-v full-h">
+          <div class="container-centering">
+            <form
+              class="contact-form flex-c-v"
+              action="https://formsubmit.co/913dcdc22053ca7abfe5f79b178b8ed6"
+              method="POST"
+            >
+              <input type="text" name="name" placeholder="Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <textarea
+                type="text"
+                name="message"
+                placeholder="Message"
+                rows="6"
+                required
+              ></textarea>
+              <button class="contact-submit-btn hover-target" type="submit">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div>
-
-	</div class="section over-hide">
-	
-</body>
-<!-- JS -->
-<script src="./js/main.js"></script>
-<script src="./js/typing.js"></script>
+    <div class="section footer">
+      <div class="max-width-container">
+        <div class="footer-inner">
+          <div class="footer-list">
+            <a class="footer-list-item hover-target">Services</a>
+            <a class="footer-list-item hover-target">About Us</a>
+            <a class="footer-list-item hover-target">Our Work</a>
+            <a class="footer-list-item hover-target">The Team</a>
+            <a class="footer-list-item hover-target">Careers</a>
+            <a class="footer-list-item hover-target">Privacy Policy</a>
+            <a class="footer-list-item hover-target">Cookie Policy</a>
+          </div>
+          <div class="footer-socials flex-c">
+            <i class="fa-brands fa-2xl fa-github hover-target"></i>
+            <i class="fa-brands fa-2xl fa-linkedin hover-target"></i>
+            <i class="fa-brands fa-2xl fa-twitter hover-target"></i>
+            <i class="fa-brands fa-2xl fa-instagram hover-target"></i>
+          </div>
+          <div class="footer-brand">
+            <div class="footer-brand-logo">
+              <img src="./assets/nocxa_title.svg" alt="logo" />
+            </div>
+            <div class="footer-brand-text">
+              2019 &copy; Noxca All rights reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- JS -->
+  <script src="./js/main.js"></script>
 </html>
