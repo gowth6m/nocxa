@@ -1068,7 +1068,7 @@ TECHNOLOGIES: TECHNOLOGIES USED
 }
 
 .technology-sub-title {
-  font-size: max(0.5em, 1.2vw);
+  font-size: max(1em, 1.2vw);
   color: var(--mainSubBlack);
 }
 
@@ -1103,12 +1103,13 @@ TECHNOLOGIES: TECHNOLOGIES USED
 .technology-showcase .tab {
   background-color: transparent;
   display: inline-block;
-  padding: 10px 10px 30px 10px;
+  padding: 5px 5px 10px 5px;
   margin: 10px;
   color: var(--mainBlack);
   vertical-align: top;
   cursor: pointer;
   border-bottom: 10px solid #ccc;
+  font-size: max(1em, 1.3vw);
 }
 
 .technology-showcase .tab:hover {
@@ -1175,8 +1176,20 @@ TECHNOLOGIES: TECHNOLOGIES USED
   }
 
   .tech-showcase-container { 
-    overflow-x: hidden !important;
+    overflow-x: visible !important;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
+
+  .tech-showcase-container img:first-child {
+    margin-left: 20vw !important;
+  }
+
+  /* .tech-showcase-container img:last-child {
+    margin-right: 50vw !important;
+  } */
 }
 
 .tech-showcase-container {
