@@ -1089,21 +1089,21 @@ TECHNOLOGIES: TECHNOLOGIES USED
 
 .technology-showcase .flex-tabs .tab {
   flex-grow: 1;
-  max-height: 40px;
 }
 
 .technology-showcase .flex-tabs .panel {
-  background-color: var(--mainGrey);
   padding: 20px;
   display: none;
   width: 100%;
   flex-basis: auto;
+  margin: 0;
+  overflow-x: hidden; 
 }
 
 .technology-showcase .tab {
   background-color: transparent;
   display: inline-block;
-  padding: 10px;
+  padding: 10px 10px 30px 10px;
   margin: 10px;
   color: var(--mainBlack);
   vertical-align: top;
@@ -1163,33 +1163,42 @@ TECHNOLOGIES: TECHNOLOGIES USED
     order: 8;
   }
 
-#tab-one:checked ~ .tabs #tab-one-panel,
-#tab-two:checked ~ .tabs #tab-two-panel,
-#tab-three:checked ~ .tabs #tab-three-panel,
-#tab-four:checked ~ .tabs #tab-four-panel {
-    border-bottom: 1px solid #ccc;
+  .technology-showcase .tab {
+    padding-bottom: 5px;
+  }
+
+  .tech-item-box {
+    padding: 0px 5px;
+    filter: grayscale(100%);
+    width: 40vw !important;
+    height: auto;
+  }
+
+  .tech-showcase-container { 
+    overflow-x: hidden !important;
   }
 }
 
-.tech-frontend {
+.tech-showcase-container {
   display: flex;
+  align-items: center;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   overflow: hidden;
 }
 
 .tech-item-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+  padding: 0px 20px;
+  filter: grayscale(100%);
+  width: 20%;
+  height: auto;
 }
 
-.tech-item-box i {
-  padding: 25px;
+.tech-item-box:focus,
+.tech-item-box:hover {
+  filter: grayscale(0%);
 }
+
 
 /*====================================================
 CONTACT: GET IN TOUCH
