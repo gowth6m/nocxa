@@ -1097,7 +1097,7 @@ TECHNOLOGIES: TECHNOLOGIES USED
   width: 100%;
   flex-basis: auto;
   margin: 0;
-  overflow-x: hidden; 
+  /* overflow-x: hidden;  */
 }
 
 .technology-showcase .tab {
@@ -1169,27 +1169,20 @@ TECHNOLOGIES: TECHNOLOGIES USED
   }
 
   .tech-item-box {
-    padding: 0px 5px;
+    padding: 0 !important;
+    margin: 0 !important;
     filter: grayscale(100%);
-    width: 40vw !important;
+    width: 30vw !important;
     height: auto;
   }
 
   .tech-showcase-container { 
-    overflow-x: visible !important;
-    position: absolute;
     margin: 0;
     padding: 0;
     width: 100%;
+    flex-wrap: wrap;
   }
 
-  .tech-showcase-container img:first-child {
-    margin-left: 20vw !important;
-  }
-
-  /* .tech-showcase-container img:last-child {
-    margin-right: 50vw !important;
-  } */
 }
 
 .tech-showcase-container {
