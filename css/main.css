@@ -11,7 +11,7 @@ OVERALL CSS
     --mainPurple: 	#8C52FF;
     --mainWhite: #EFE9F4;
     --mainBlack: #070707;
-    --mainSubBlack: #a0a0a0;
+    --mainSubBlack: #8f8f8f;
     --mainGrey: #1f2029;
     --melon: #FCBFB7;
     --apple: #BDF7B7;
@@ -758,7 +758,7 @@ HOME PAGE
 
 .home-sub-t {
   margin: 20px;
-  font-size: 1.2em;
+  font-size: max(1.2em, 1.3vw);
 }
 
 .switch-wrap h1 {
@@ -1097,6 +1097,7 @@ TECHNOLOGIES: TECHNOLOGIES USED
   width: 100%;
   flex-basis: auto;
   margin: 0;
+  /* min-height: 10vh; */
   /* overflow-x: hidden;  */
 }
 
