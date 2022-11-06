@@ -11,6 +11,7 @@ OVERALL CSS
     --mainPurple: 	#8C52FF;
     --mainWhite: #EFE9F4;
     --mainBlack: #070707;
+    --mainSubBlack: #8f8f8f;
     --mainGrey: #1f2029;
     --melon: #FCBFB7;
     --apple: #BDF7B7;
@@ -757,7 +758,7 @@ HOME PAGE
 
 .home-sub-t {
   margin: 20px;
-  font-size: 1.2em;
+  font-size: max(1.2em, 1.3vw);
 }
 
 .switch-wrap h1 {
@@ -1037,6 +1038,174 @@ TEAM: MEET THE TEAM
     height: 200px;
   }
 }
+
+/*====================================================
+TECHNOLOGIES: TECHNOLOGIES USED
+=====================================================*/
+#technology {
+  height: auto;
+  background-color: var(--mainWhite);
+}
+
+.technology-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--mainWhite);
+}
+
+.technology-title {
+  font-size: 1.5em;
+  font-weight: 900;
+  font-size: max(2em, 3vw);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--mainBlack);
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  padding: 30px 0px;
+}
+
+.technology-sub-title {
+  font-size: max(1em, 1.2vw);
+  color: var(--mainSubBlack);
+}
+
+.technology-showcase {
+  width: 100%;
+}
+
+.technology-showcase .state {
+  visibility: hidden;
+}
+
+.technology-showcase .flex-tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.technology-showcase .flex-tabs .tab {
+  flex-grow: 1;
+}
+
+.technology-showcase .flex-tabs .panel {
+  padding: 20px;
+  display: none;
+  width: 100%;
+  flex-basis: auto;
+  margin: 0;
+  /* min-height: 10vh; */
+  /* overflow-x: hidden;  */
+}
+
+.technology-showcase .tab {
+  background-color: transparent;
+  display: inline-block;
+  padding: 5px 5px 10px 5px;
+  margin: 10px;
+  color: var(--mainBlack);
+  vertical-align: top;
+  cursor: pointer;
+  border-bottom: 10px solid #ccc;
+  font-size: max(1em, 1.3vw);
+}
+
+.technology-showcase .tab:hover {
+  background-color: (var(--mainPurple));
+}
+
+#tab-one:checked ~ .tabs #tab-one-label,
+#tab-two:checked ~ .tabs #tab-two-label,
+#tab-three:checked ~ .tabs #tab-three-label,
+#tab-four:checked ~ .tabs #tab-four-label {
+  cursor: pointer;
+  border-bottom-color: var(--mainPurple);
+}
+
+#tab-one:checked ~ .tabs #tab-one-panel,
+#tab-two:checked ~ .tabs #tab-two-panel,
+#tab-three:checked ~ .tabs #tab-three-panel,
+#tab-four:checked ~ .tabs #tab-four-panel {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .flex-tabs {
+    flex-direction: row;
+  }
+  .flex-tabs .tab {
+    color: var(--mainBlack);
+  }
+
+  .flex-tabs #tab-one-label {
+    order: 1;
+  }
+  .flex-tabs #tab-two-label {
+    order: 2;
+  }
+  .flex-tabs #tab-three-label {
+    order: 3;
+  }
+  .flex-tabs #tab-four-label {
+    order: 4;
+  }
+  .flex-tabs #tab-one-panel {
+    order: 5;
+  }
+  .flex-tabs #tab-two-panel {
+    order: 6;
+  }
+  .flex-tabs #tab-three-panel {
+    order: 7;
+  }
+  .flex-tabs #tab-four-panel {
+    order: 8;
+  }
+
+  .technology-showcase .tab {
+    padding-bottom: 5px;
+  }
+
+  .tech-item-box {
+    padding: 0 !important;
+    margin: 0 !important;
+    filter: grayscale(100%);
+    width: 30vw !important;
+    height: auto;
+  }
+
+  .tech-showcase-container { 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+}
+
+.tech-showcase-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.tech-item-box {
+  padding: 0px 20px;
+  filter: grayscale(100%);
+  width: 20%;
+  height: auto;
+}
+
+.tech-item-box:focus,
+.tech-item-box:hover {
+  filter: grayscale(0%);
+}
+
 
 /*====================================================
 CONTACT: GET IN TOUCH
